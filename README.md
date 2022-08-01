@@ -9,13 +9,13 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 ### Pre-requisitos 📋
 
-_Instalar las dependendencias del proyecto (ir a la carpeta de requirements)_
+_Para instalar las dependendencias del proyecto (ir a la carpeta que contiene harcivo de requirements.txt)_
 
 ```
-pip install -r base.txt
+pip install -r requirements.txt
 ```
 
-_Crear settings local.py_
+_Crear settings local.py y reemplazar datos del DATABASES por los que corresponda a cada maquina local_
 
 from .base import *
 ```
