@@ -1,7 +1,7 @@
 # EQUIPO 3 Primer Sitio desarrollado en el Informatorio 2022
 
 _Este es el primer proyecto del modulo de desarollo web_
-_Usando template base: https://themewagon.com/themes/free-bootstrap-4-html5-restaurant-website-template-feane/
+_Usando template base: https://getbootstrap.com/docs/4.0/examples/album/_
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
