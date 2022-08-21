@@ -395,7 +395,7 @@ a:focus {
   height: 20px;
   background-color: #ffbe33;
 }
-
+/*
 .offer_section {
   position: relative;
   padding-top: 45px;
@@ -476,7 +476,7 @@ a:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-
+*/
 .food_section .filters_menu {
   padding: 0;
   display: -webkit-box;
