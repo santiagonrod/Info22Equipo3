@@ -3403,52 +3403,6 @@ input[type="button"].btn-block {
   pointer-events: none;
 }
 
-.btn-orange { 
-  color: #FFFFFF; 
-  background-color: #ED7D0C; 
-  border-color: #ED7D0C; 
-} 
- 
-.btn-orange:hover, 
-.btn-orange:focus, 
-.btn-orange:active, 
-.btn-orange.active, 
-.open .dropdown-toggle.btn-orange { 
-  color: #FFFFFF; 
-  background-color: #E8A710; 
-  border-color: #ED7D0C; 
-} 
- 
-.btn-orange:active, 
-.btn-orange.active, 
-.open .dropdown-toggle.btn-orange { 
-  background-image: none; 
-} 
- 
-.btn-orange.disabled, 
-.btn-orange[disabled], 
-fieldset[disabled] .btn-orange, 
-.btn-orange.disabled:hover, 
-.btn-orange[disabled]:hover, 
-fieldset[disabled] .btn-orange:hover, 
-.btn-orange.disabled:focus, 
-.btn-orange[disabled]:focus, 
-fieldset[disabled] .btn-orange:focus, 
-.btn-orange.disabled:active, 
-.btn-orange[disabled]:active, 
-fieldset[disabled] .btn-orange:active, 
-.btn-orange.disabled.active, 
-.btn-orange[disabled].active, 
-fieldset[disabled] .btn-orange.active { 
-  background-color: #ED7D0C; 
-  border-color: #ED7D0C; 
-} 
- 
-.btn-orange .badge { 
-  color: #ED7D0C; 
-  background-color: #FFFFFF; 
-}
-
 .input-group {
   position: relative;
   display: -ms-flexbox;
@@ -10081,5 +10035,50 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
 
+.btn-orange { 
+  color: #FFFFFF; 
+  background-color: #ED7D0C; 
+  border-color: #ED7D0C; 
+} 
+ 
+.btn-orange:hover, 
+.btn-orange:focus, 
+.btn-orange:active, 
+.btn-orange.active, 
+.open .dropdown-toggle.btn-orange { 
+  color: #FFFFFF; 
+  background-color: #E8A710; 
+  border-color: #ED7D0C; 
+} 
+ 
+.btn-orange:active, 
+.btn-orange.active, 
+.open .dropdown-toggle.btn-orange { 
+  background-image: none; 
+} 
+ 
+.btn-orange.disabled, 
+.btn-orange[disabled], 
+fieldset[disabled] .btn-orange, 
+.btn-orange.disabled:hover, 
+.btn-orange[disabled]:hover, 
+fieldset[disabled] .btn-orange:hover, 
+.btn-orange.disabled:focus, 
+.btn-orange[disabled]:focus, 
+fieldset[disabled] .btn-orange:focus, 
+.btn-orange.disabled:active, 
+.btn-orange[disabled]:active, 
+fieldset[disabled] .btn-orange:active, 
+.btn-orange.disabled.active, 
+.btn-orange[disabled].active, 
+fieldset[disabled] .btn-orange.active { 
+  background-color: #ED7D0C; 
+  border-color: #ED7D0C; 
+} 
+ 
+.btn-orange .badge { 
+  color: #ED7D0C; 
+  background-color: #FFFFFF; 
+}
+/*# sourceMappingURL=bootstrap.css.map */
