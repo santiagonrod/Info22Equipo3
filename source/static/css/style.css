@@ -2,7 +2,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
-  background-color: #coral;
+  background-color:rgb(231, 128, 59);
   overflow-x: hidden;
 }
 
@@ -900,7 +900,7 @@ a:focus {
 
 /* footer section*/
 .footer_section {
-  background-color: #222831;
+  background-color: #24232e;
   color: #ffffff;
   padding: 75px 0 40px 0;
   text-align: center;
