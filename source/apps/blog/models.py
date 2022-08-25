@@ -6,6 +6,7 @@ class post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=64)
     text = models.TextField()
+    imagen = models.ImageField(null=True,blank=True)
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(

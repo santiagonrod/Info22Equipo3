@@ -1,0 +1,12 @@
+body{
+    background-image: url(../images/lalcecenfoco.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    margin-left: auto;
+    margin-right: auto;
+}
+.conteiner{
+    margin-left: 7.3%;
+
+}
