@@ -8,7 +8,10 @@ from django.shortcuts import render
 def post_list(request):
     return render(request, os.path.join(settings.BASE_DIR, '/templates/index.html'), {})
 '''
-location = os.path.join(settings.BASE_DIR, 'templates\index.html')
+location = os.path.join(settings.BASE_DIR, 'templates/post.html')
+
+def inicio(request):
+    return render(request, os.path.join(settings.BASE_DIR, 'templates/index.html'), {})
 
 
 def post_list(request):
