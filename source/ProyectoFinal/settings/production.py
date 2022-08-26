@@ -10,13 +10,11 @@ ALLOWED_HOSTS = []
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        #'NAME': 'Proyecto',
-        #'USER': 'postgres',
-        #'PASSWORD': 'grupo3info2022',
-        #'HOST': '127.0.0.1',
-        #'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd55ffjodq2g19l',
+        'USER': 'hdplfawgkaeyvc',
+        'PASSWORD': '294b65ea69093b7f2d56b78749cca809a91aa3a4f65deb73037b802b479103a9',
+        'HOST': 'ec2-34-235-31-124.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
