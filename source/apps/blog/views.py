@@ -1,9 +1,12 @@
 import os
+from tkinter.tix import Form
+from turtle import title
 from django.contrib import messages
 from django.conf import settings
 from django.shortcuts import render,redirect
 from .forms import CreacionDeUsuario
 from django.contrib.auth import authenticate, login
+from apps.blog.forms import FormPost
 
 
 # Create your views here.
@@ -35,3 +38,21 @@ def registro(request):
             return redirect (to="post_list")
         data["form"] = formulario
     return render(request, 'registration/registro.html', data)
+
+def crear_post(request):
+    if request.method == "POST":
+        form = FormPost(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author_id = request.user.id
+            post.save()
+            titulo = form.cleaned_data.get("title")
+            messages.success(request, f"El post {title} se ha creado correctamente")
+            return redirect("post")
+        else:
+            for msg in form.error_messages:
+                messages.error(request, form.error_messages[msg])
+    form = FormPost()
+    return render(request, "crear_post.html", {"form": form})
+
+
