@@ -2,7 +2,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
-  background-color:#24232e;
+  background-color:#d1d3d8;
   overflow-x: hidden;
 }
 
@@ -476,7 +476,7 @@ a:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-*/
+*/ /*
 .food_section .filters_menu {
   padding: 0;
   display: -webkit-box;
@@ -660,8 +660,8 @@ a:focus {
 
 .about_section .detail-box a:hover {
   background-color: #24232e;
-}
-
+} */
+/*
 .book_section {
   position: relative;
 }
@@ -735,7 +735,7 @@ a:focus {
   min-height: 100%;
   width: 100%;
 }
-
+*/
 /* client section start */
 .client_section .heading_container {
   margin-bottom: 30px;
@@ -770,7 +770,7 @@ a:focus {
 
 .client_section .box .img-box img {
   border-radius: 100%;
-  border: 5px solid #24232e;
+  border: 5px solid #e2e2e6;
   position: relative;
 }
 
@@ -781,13 +781,13 @@ a:focus {
   top: 0;
   width: 20px;
   height: 20px;
-  background-color: #24232e;
+  background-color: #a7a7a7;
   -webkit-transform: rotate(45deg) translateX(-50%);
           transform: rotate(45deg) translateX(-50%);
 }
 
 .client_section .box .detail-box {
-  background-color: #222831;
+  background-color: #c6c6c7;
   color: #ffffff;
   padding: 25px 25px 15px 25px;
   border-radius: 5px;
@@ -843,7 +843,7 @@ a:focus {
   border: none;
   height: 50px;
   padding-left: 25px;
-  background-color:#24232e;
+  background-color:#969696;
   border: 1px solid #ccc;
   outline: none;
   color: #000000;
@@ -886,7 +886,7 @@ a:focus {
   text-transform: uppercase;
   display: inline-block;
   padding: 10px 55px;
-  background-color: #24232e;
+  background-color: #a3a3a7;
   color: #ffffff;
   border-radius: 0px;
   -webkit-transition: all 0.3s;
@@ -895,7 +895,7 @@ a:focus {
 }
 
 .contact_section .form_container button:hover {
-  background-color: #24232e;
+  background-color: #a5a5a5;
 }
 
 /* footer section*/
