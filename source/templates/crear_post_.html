@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+{% include "head.html" %}
+
+<body>
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="{% static 'images/lalcecenfoco.png' %}" alt="">
+    </div>
+
+{% include "header.html" %}
+
+    <div class="container">
+
+    <div class="page-header">
+        <h1>New Blog Post <small>A responsive blog post template</small></h1>
+    </div>
+
+
+<!-- New Blog Post - START -->
+    <div class="row" id="row_style">
+        <h4 class="text-center">Submit new post</h4>
+        <div class="col-md-4   col-md-offset-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Title">
+            </div>
+            <textarea id="editor" cols="30" rows="10">Submit your text post here...</textarea>
+            <br>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Tags">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" id="submit">Submit new post</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #row_style {
+        margin-top: 60px;
+    }
+
+    #submit {
+        display: block;
+        margin: auto;
+    }
+</style>
+
+<!-- you need to include the shieldui css and js assets in order for the charts to work -->
+<link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+
+<script>
+    $(function () {
+        $("#editor").shieldEditor({
+            height: 600
+        });
+    })
+</script>
+<!-- New Blog Post - END -->
+
+</div>
+
+
+{% include "footer.html" %}
+
+{% include "scripts.html" %}
+
+</body>
+
+</html>

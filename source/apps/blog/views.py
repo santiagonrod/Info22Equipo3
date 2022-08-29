@@ -17,7 +17,7 @@ def post_list(request):
 location = os.path.join(settings.BASE_DIR, 'templates/post.html')
 
 def inicio(request):
-    return render(request, os.path.join(settings.BASE_DIR, 'templates/index.html'), {})
+    return render(request, os.path.join(settings.BASE_DIR, 'templates/crear_post_.html'), {})
 
 
 def post_list(request):
