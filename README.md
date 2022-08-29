@@ -43,7 +43,7 @@ _Ayudaron a levantar el proyecto desde sus inicios_
 
 * **María José Ojeda** - *Docente - Desarrollo WEB y Bases de Datos*
 
-* **Santiago Nahuel Rodríguez - Vanesa Solange Ortega - Malena Domenech - Maximiliano Ortíz - Juan Ignacio Ramírez - Leonardo David Saucedo - David Elias Gamarra - Matias Villalba - Néstor Abel González** - *Students*
+* **Santiago Nahuel Rodríguez - Malena Domenech - Maximiliano Ortíz - Juan Ignacio Ramírez - Leonardo David Saucedo - David Elias Gamarra -  Néstor Abel González** - *Students*
 
 ---
 ⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
