@@ -56,3 +56,5 @@ def crear_post(request):
     return render(request, "crear_post.html", {"form": form})
 
 
+def sobre_nosotros(request):
+     return render(request, 'sobre_nos.html')
