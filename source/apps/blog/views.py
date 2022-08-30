@@ -7,6 +7,7 @@ from django.shortcuts import render,redirect
 from .forms import CreacionDeUsuario
 from django.contrib.auth import authenticate, login
 from apps.blog.forms import FormPost
+from .models import post
 
 
 # Create your views here.
@@ -14,7 +15,7 @@ from apps.blog.forms import FormPost
 def post_list(request):
     return render(request, os.path.join(settings.BASE_DIR, '/templates/index.html'), {})
 '''
-location = os.path.join(settings.BASE_DIR, 'templates/post.html')
+location = os.path.join(settings.BASE_DIR, 'templates/post_list.html')
 
 def inicio(request):
     return render(request, os.path.join(settings.BASE_DIR, 'templates/index.html'), {})
@@ -22,6 +23,9 @@ def inicio(request):
 
 def post_list(request):
     return render(request, location, {})
+
+def post(request):
+    return render(request, os.path.join(settings.BASE_DIR, 'templates/post.html'), {})
 
 def registro(request):
     data = {
@@ -35,7 +39,7 @@ def registro(request):
             user = authenticate(username=formulario.cleaned_data["username"], password=formulario.cleaned_data["password1"])
             login(request, user)
             messages.success(request, "Te has registrado correctamente")
-            return redirect (to="post_list")
+            return redirect (to="inicio")
         data["form"] = formulario
     return render(request, 'registration/registro.html', data)
 
@@ -48,7 +52,7 @@ def crear_post(request):
             post.save()
             titulo = form.cleaned_data.get("title")
             messages.success(request, f"El post {title} se ha creado correctamente")
-            return redirect("post")
+            return redirect(to="post_list")
         else:
             for msg in form.error_messages:
                 messages.error(request, form.error_messages[msg])
@@ -58,3 +62,10 @@ def crear_post(request):
 
 def sobre_nosotros(request):
      return render(request, 'sobre_nos.html')
+
+def HomePage(request):
+    get_all_posts = post.objects.all()
+    context = {
+        'posts':get_all_posts
+    }
+    return render(request, '.html', context)
