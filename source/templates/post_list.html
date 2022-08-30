@@ -16,13 +16,13 @@
                             <!-- Post title-->
                             <h1 class="fw-bolder mb-1"; style= "color:orangered ;font-family:Georgia, 'Times New Roman', Times, serif">{{i.title}}</h1>
                             <!-- Post meta content-->
-                            <div class="text-muted fst-italic mb-2">Posted on {{i.published_date}} by {{i.author}}</div>
+                            <div class="text-muted fst-italic mb-2">Posted on {{i.created_date}} by {{i.author}}</div>
                             <!-- Post categories-->
                             <!--a class="badge bg-secondary text-decoration-none link-light" href="#!">NOTICIA</a-->
                             
                         </header>
                         <!-- Preview image figure-->
-                        <figure class="mb-4"><img class="img-fluid rounded" src="{{i.image}}" alt="..." />
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{{i.imagen.url}}" alt="" />
                         </figure>
                         <!-- Post content-->
                         <section class="mb-5"; style="color:black; font-family:Modern No.20">
