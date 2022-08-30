@@ -20,11 +20,14 @@ location = os.path.join(settings.BASE_DIR, 'templates/post_list.html')
 def inicio(request):
     return render(request, os.path.join(settings.BASE_DIR, 'templates/index.html'), {})
 
-
 def post_list(request):
-    return render(request, location, {})
+    get_all_posts = post.objects.all()
+    context = {
+        'posts':get_all_posts
+    }
+    return render(request, location, context)
 
-def post(request):
+def a_post(request):
     return render(request, os.path.join(settings.BASE_DIR, 'templates/post.html'), {})
 
 def registro(request):
@@ -63,9 +66,3 @@ def crear_post(request):
 def sobre_nosotros(request):
      return render(request, 'sobre_nos.html')
 
-def HomePage(request):
-    get_all_posts = post.objects.all()
-    context = {
-        'posts':get_all_posts
-    }
-    return render(request, '.html', context)
