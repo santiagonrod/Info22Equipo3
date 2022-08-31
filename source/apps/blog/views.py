@@ -3,11 +3,12 @@ from tkinter.tix import Form
 from turtle import title
 from django.contrib import messages
 from django.conf import settings
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, get_object_or_404
 from .forms import CreacionDeUsuario
 from django.contrib.auth import authenticate, login
 from apps.blog.forms import FormPost
 from .models import post
+from django.views.generic import CreateView, DetailView, ListView, UpdateView, DeleteView
 
 
 # Create your views here.
@@ -30,6 +31,15 @@ def post_list(request):
         'posts':get_all_posts
     }
     return render(request, location, context)
+
+
+class VistaPost(DetailView):
+    nombre_template = 'templates/post.html'
+    queryset = post.objects.all()
+
+    def get_object(self):
+        return get_object_or_404(post,)
+
 
 def a_post(request):
     return render(request, os.path.join(settings.BASE_DIR, 'templates/post.html'), {})
