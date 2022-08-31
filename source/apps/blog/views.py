@@ -33,12 +33,12 @@ def post_list(request):
     return render(request, location, context)
 
 
-class VistaPost(DetailView):
+'''class VistaPost(DetailView):
     nombre_template = 'templates/post.html'
     queryset = post.objects.all()
 
     def get_object(self):
-        return get_object_or_404(post,)
+        return get_object_or_404(post,)'''
 
 
 def a_post(request):
@@ -80,3 +80,5 @@ def crear_post(request):
 def sobre_nosotros(request):
      return render(request, 'sobre_nos.html')
 
+def asociarse(request):
+    return render(request, 'asociarse.html')
