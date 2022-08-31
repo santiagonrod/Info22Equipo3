@@ -18,10 +18,14 @@ def post_list(request):
 location = os.path.join(settings.BASE_DIR, 'templates/post_list.html')
 
 def inicio(request):
-    return render(request, os.path.join(settings.BASE_DIR, 'templates/index.html'), {})
+    get_all_posts = post.objects.all().order_by('-created_date')[:3]
+    context = {
+        'posts':get_all_posts
+    }
+    return render(request, os.path.join(settings.BASE_DIR, 'templates/index.html'), context)
 
 def post_list(request):
-    get_all_posts = post.objects.all()
+    get_all_posts = post.objects.all().order_by('-created_date')
     context = {
         'posts':get_all_posts
     }
