@@ -55,14 +55,16 @@
         <div class="row">
             <div class="col-12 col-md-6 offset-md-5">
                 <div class="card text-white bg-dark mb-3 text-left" >
-                    <div class="card">
-                    <div class="card-header text-center bg-warning" style="color:black;font-family:'Rockwell'"><h4>POST</h4>
-                    <div class="card-body" style="color:white; font-family:'Rockwell'">
+                    <div class="card text-center bg-dark">
+                    <div class="card-header text-center" style="color:rgb(58, 58, 58);font-family:'Rockwell'; background-color:rgb(223, 145, 0)">
+                      <h4>POST</h4>
+                    </div>
+                    <div class="card-body" style="color:rgb(165, 165, 165); font-family:'Rockwell'">
                         <form method="post" action="" class="mt-3" autocomplete="off" enctype="multipart/form-data">
                             {% csrf_token %}
                              {{ form | crispy }}
-                        
-                            <input type="submit" value="Crear Post" class="btn btn-warning btn-lg btn-block">
+                        <br>
+                            <input type="submit" value="Crear Post" class="btn btn-orange btn-lg btn-block">
                         </form>
                     </div>
                 </div>
@@ -70,5 +72,6 @@
         </div>
     </div>
     </center>
+    {% include 'footer.html' %}
 </body>
 </html>
