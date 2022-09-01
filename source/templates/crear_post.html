@@ -1,6 +1,6 @@
 
 {% load static %}
-
+{% include 'head.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +11,42 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" />
     <link rel="shortcut icon" href="{% static 'images/icono.png' %}" type="">
 
-
-    <title>Crear Post</title>
-</head>
+   
+  </head>
+<title>Crear Post</title>
 <body>
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  mx-auto ">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'inicio' %}"><b>INICIO</b> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer"><b>CONTACTO</b></a>
+            </li>
+            
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="#"><b>@{{user.username}}</b></a>
+            </li>
+            </ul>  
+            <div class="user_option">
+              <a href="" class="user_link" >  <!--  -->
+            <a class="btn btn-orange" href="{% url 'logout' %}" style="color:white"><b>CERRA SESION</b></a>
+            {% else %}
+            <div class="user_option">
+              <a href="" class="user_link" >  <!--  -->
+            <a class="btn btn-orange" href="{% url 'login' %}" style="color:white"><b>LOGIN</b></a>
+            {% endif %}
+            
+  </header>
     {% load crispy_forms_tags %}
     <center>
     <div class="conteiner-fluid">
