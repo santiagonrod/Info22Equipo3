@@ -1,3 +1,9 @@
-body{
-
+body{ background-color:transparent;
+}
+input{
+    width: 70%;
+}
+textarea{
+    width: 100% ;
+    max-width: 800px;
 }
