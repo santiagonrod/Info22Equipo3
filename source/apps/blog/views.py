@@ -32,6 +32,11 @@ def post_list(request):
     }
     return render(request, location, context)
 
+def detail_view(request, id):
+    context = {}
+    context['post'] = post.objects.get(pk=id)
+
+    return render(request, 'post.html', context)
 
 '''class VistaPost(DetailView):
     model = post
@@ -39,7 +44,9 @@ def post_list(request):
     context_object_name = 'post'
 
     def get_object(self):
-        return get_object_or_404(post,)'''
+        return get_object_or_404(post,)
+'''
+
 
 
 def a_post(request):

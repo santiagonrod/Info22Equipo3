@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 {% include "head.html" %}
-{% include "header.html" %} -->
+{% include "header.html" %}
 
 <body>
         <!-- Page content-->
@@ -9,27 +9,24 @@
             <div class="row">
                 <div class="col-lg-8">
                     <!-- Post content-->
+                    <!-- Post content-->
                     <article>
                         <!-- Post header-->
                         <header class="mb-4">
                             <!-- Post title-->
-                            <h1 class="fw-bolder mb-1"; style= "color:orangered ;font-family:Georgia, 'Times New Roman', Times, serif">Publicaciones</h1>
-                            <!-- Post meta content
-                            <div class="text-muted fst-italic mb-2">Posted on January 1, 2022 by User</div>-->
+                            <a href={% url 'post' id=post.id %}> <h1 class="fw-bolder mb-1" ; style= "color:orangered ;font-family:Georgia, 'Times New Roman', Times, serif">{{post.title}}</h1> </a>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">Posted on {{post.created_date}} by {{post.author}}</div>
                             <!-- Post categories-->
                             <!--a class="badge bg-secondary text-decoration-none link-light" href="#!">NOTICIA</a-->
                             
                         </header>
                         <!-- Preview image figure-->
-                        <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{{post.imagen.url}}" alt="" />
+                        </figure>
                         <!-- Post content-->
                         <section class="mb-5"; style="color:black; font-family:Modern No.20">
-                            <p class="fs-5 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique in risus laoreet eleifend. Proin et urna sagittis, scelerisque ex in, eleifend magna. Nullam eget finibus tortor, vitae ullamcorper urna. Nunc quis interdum ex. Nunc finibus iaculis nunc, vitae volutpat est imperdiet lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus efficitur enim eu ex cursus imperdiet. Mauris tristique eleifend augue, ac pretium dui rhoncus a. Pellentesque semper enim sed ante accumsan commodo. Etiam interdum tempor efficitur. Sed nec varius tortor. Maecenas elementum, velit at bibendum accumsan, eros nisl euismod ex, vel efficitur sapien justo id eros.</p>
-                            <p class="fs-5 mb-4">Morbi vel ullamcorper nunc. Donec egestas ultrices lacus, sed scelerisque enim feugiat quis. Suspendisse tincidunt accumsan odio in semper. Sed et sapien eget orci sodales consequat a et sem. Donec vestibulum vulputate egestas. Donec ut fermentum lorem, eu finibus diam. Curabitur auctor dapibus orci, quis lacinia nisl.</p>
-                            <p class="fs-5 mb-4">Sed eu iaculis mi, quis finibus mauris. Ut ultrices sit amet lacus nec interdum. Quisque rutrum, ligula tempor pretium sagittis, urna ex pharetra urna, in tristique lacus turpis sed tortor. Sed at lectus at tellus convallis sagittis in in velit. Nunc finibus semper erat, in vulputate lorem tempus non. Phasellus in nisi vitae lectus congue mollis. In tempus orci ac elit vehicula rutrum. Praesent non massa eu tellus eleifend viverra sit amet vitae justo.</p>
-                            <h2 class="fw-bolder mb-4 mt-5"; style="color:orangered; font-family:Georgia, 'Times New Roman', Times, serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                            <p class="fs-5 mb-4">Morbi vel ullamcorper nunc. Donec egestas ultrices lacus, sed scelerisque enim feugiat quis. Suspendisse tincidunt accumsan odio in semper. Sed et sapien eget orci sodales consequat a et sem. Donec vestibulum vulputate egestas. Donec ut fermentum lorem, eu finibus diam. Curabitur auctor dapibus orci, quis lacinia nisl.</p>
-                            <p class="fs-5 mb-4">Sed eu iaculis mi, quis finibus mauris. Ut ultrices sit amet lacus nec interdum. Quisque rutrum, ligula tempor pretium sagittis, urna ex pharetra urna, in tristique lacus turpis sed tortor. Sed at lectus at tellus convallis sagittis in in velit. Nunc finibus semper erat, in vulputate lorem tempus non. Phasellus in nisi vitae lectus congue mollis. In tempus orci ac elit vehicula rutrum. Praesent non massa eu tellus eleifend viverra sit amet vitae justo.</p>
+                            <p class="fs-5 mb-4"> {{post.text}} </p>
                         </section>
                     </article>
                     <!-- Comments section-->

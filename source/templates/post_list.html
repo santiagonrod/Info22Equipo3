@@ -50,7 +50,7 @@
                         <!-- Post header-->
                         <header class="mb-4">
                             <!-- Post title-->
-                            <h1 class="fw-bolder mb-1"; style= "color:orangered ;font-family:Georgia, 'Times New Roman', Times, serif">{{i.title}}</h1>
+                            <a href={% url 'post' id=i.id %}> <h1 class="fw-bolder mb-1"; style= "color:orangered ;font-family:Georgia, 'Times New Roman', Times, serif">{{i.title}}</h1> </a>
                             <!-- Post meta content-->
                             <div class="text-muted fst-italic mb-2">Posted on {{i.created_date}} by {{i.author}}</div>
                             <!-- Post categories-->
