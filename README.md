@@ -16,14 +16,14 @@
  </p>
    
  </p>
-   #  <p align="center"><img src="https://static.eau-thermale-avene.com/sites/files-ar/styles/250x170/public/images/logo/partners/lalcec_250x170.jpg?itok=cBTZwVCM" /></p></center>
+     <p align="center"><img src="https://static.eau-thermale-avene.com/sites/files-ar/styles/250x170/public/images/logo/partners/lalcec_250x170.jpg?itok=cBTZwVCM" /></p></center>
  </p> 
  
     
  </p><center>
 
   <img src="https://img.shields.io/badge/VERSION-V%201.0-orange"></p></center>
-#
+
 ## <p align="center">Primer Sitio Web desarrollado en el Informatorio 2022.
 #
 _Este es el primer proyecto del modulo de desarollo web_
