@@ -25,7 +25,7 @@
   <img src="https://img.shields.io/badge/VERSION-V%201.0-orange"></p></center>
 
 ## <p align="center">Primer Sitio Web desarrollado en el Informatorio 2022.
-#
+ 
 _Este es el primer proyecto del modulo de desarollo web_
 _Usando template base: https://themewagon.com/themes/free-bootstrap-4-html5-restaurant-website-template-feane/
 
