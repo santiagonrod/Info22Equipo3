@@ -34,8 +34,9 @@ def post_list(request):
 
 
 '''class VistaPost(DetailView):
-    nombre_template = 'templates/post.html'
-    queryset = post.objects.all()
+    model = post
+    template_name = 'post.html'
+    context_object_name = 'post'
 
     def get_object(self):
         return get_object_or_404(post,)'''
