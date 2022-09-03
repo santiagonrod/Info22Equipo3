@@ -14,7 +14,7 @@ class post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
-
+    '''tags = '''
 
     def publish(self):
         self.published_date = timezone.now()
