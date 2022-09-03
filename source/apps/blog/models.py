@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 
 User._meta.get_field('email')._unique = True
 
@@ -8,7 +9,7 @@ User._meta.get_field('email')._unique = True
 class post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=64)
-    text = models.TextField()
+    text = RichTextField()
     imagen = models.ImageField(null=True,blank=True)
     created_date = models.DateTimeField(
             default=timezone.now)

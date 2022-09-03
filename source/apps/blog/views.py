@@ -90,3 +90,23 @@ def sobre_nosotros(request):
 
 def asociarse(request):
     return render(request, 'asociarse.html')
+
+
+def editar_post(request, id):
+    Post = post.objects.get(id=id)
+    data = {
+        'form': FormPost(instance=Post)
+  }
+    if request.method == "POST":
+        form = FormPost(data=request.POST, instance=Post)
+        if form.is_valid():
+            form.save()
+            data['form'] = form
+    return render(request, 'editar.html', data)
+
+
+
+def eliminar_post(request, id):
+    Post = post.objects.get(id=id)
+    Post.delete()
+    return redirect(to= 'post_list')
