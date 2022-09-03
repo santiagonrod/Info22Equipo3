@@ -1,9 +1,10 @@
 body{ background-color:transparent;
 }
 input{
-    width: 70%;
+    width: 60%;
 }
 textarea{
+    position: center;
     width: 100% ;
     max-width: 800px;
 }

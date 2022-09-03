@@ -63,6 +63,7 @@
                     <div class="card-body" style="color:rgb(192, 192, 192); font-weight: bolder ;font-size: 18px;font-family:Georgia, 'Times New Roman', Times, serif">
                         <form method="post" action="" class="mt-3" autocomplete="off" enctype="multipart/form-data">
                             {% csrf_token %}
+                            {{ form.media }}
                              {{ form | crispy }}
                         <br>
                             <input type="submit" value="Crear Post" class="btn btn-orange btn-lg btn-block" style="font-family:Georgia, 'Times New Roman', Times, serif; font-weight: bold ">
