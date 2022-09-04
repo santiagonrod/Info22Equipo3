@@ -46,10 +46,16 @@
         <div class="card mb-4" style="background-color:transparent; margin-left: 100px; border-color:transparent">
             <div class="card-header" style="background-color:transparent; font-family:Arial, Helvetica, sans-serif"><b>BUSQUEDA</b></div>
             <div class="card-body" style="background-color:transparent">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" style="background-color:rgba(252, 216, 170, 0.514);border-style:hidden; border-color:rgb(92, 90, 90)"/>
-                    <button class="btn btn-primary" id="button-search" type="button" style="background-color: rgb(226, 121, 1); border-color: transparent">BUSCAR</button>
+                <!--form method="get"-->
+                  <div class="input-group">
+                    <form method="get">
+                      <div id="custom-search-input">
+                    <input class="form-control" name="buscar" type="text" placeholder="Buscar..." value="request.GET.buscar" style="background-color:rgba(252, 216, 170, 0.514);border-style:hidden; border-color:rgb(92, 90, 90)"/>
+                    <button class="btn btn-primary" id="button-search" type="submit" style="background-color: rgb(226, 121, 1); border-color: transparent">BUSCAR</button>
+                  </form>
                 </div>
+                  </div>
+                <!--/form-->
             </div>
         </div>
     </div>
