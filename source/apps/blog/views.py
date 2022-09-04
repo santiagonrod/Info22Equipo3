@@ -6,7 +6,8 @@ from django.conf import settings
 from django.shortcuts import render,redirect, get_object_or_404
 from .forms import CreacionDeUsuario
 from django.contrib.auth import authenticate, login
-from apps.blog.forms import FormPost
+from django.contrib.auth.models import User
+from apps.blog.forms import FormPost, UserForm
 from .models import post
 from django.views.generic import CreateView, DetailView, ListView, UpdateView, DeleteView
 
@@ -38,15 +39,24 @@ def detail_view(request, id):
 
     return render(request, 'post.html', context)
 
-'''class VistaPost(DetailView):
-    model = post
-    template_name = 'post.html'
-    context_object_name = 'post'
+'''def perfil_usuario(request, id):
+    context = {}
+    context['user'] = User.objects.get(pk=id)
 
-    def get_object(self):
-        return get_object_or_404(post,)
+    return render(request, 'perfil_usuario.html', context)
 '''
 
+def perfil_usuario(request, id):
+    user = User.objects.get(id=id)
+    data = {
+        'form': UserForm(instance=user)
+  }
+    if request.method == "POST":
+        form = UserForm(data=request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            data['form'] = form
+    return render(request, 'perfil_usuario.html', data)
 
 
 def a_post(request):
@@ -103,6 +113,7 @@ def editar_post(request, id):
             form.save()
             data['form'] = form
     return render(request, 'editar.html', data)
+
 
 
 

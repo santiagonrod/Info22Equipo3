@@ -17,5 +17,6 @@ urlpatterns = [
     path('asociarse/', views.asociarse, name= 'asociarse'),
     path('editar_post/<id>', views.editar_post, name='editar'),
     path('eliminar_post/<id>', views.eliminar_post, name='eliminar'),
+    path('perfil/<int:id>', views.perfil_usuario, name='perfil'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
