@@ -14,7 +14,7 @@
                         <!-- Post header-->
                         <header class="mb-4">
                             <!-- Post title-->
-                            <a href={% url 'post' id=post.id %}> <h1 class="fw-bolder mb-1" ; style= "color:orangered ;font-family:Georgia, 'Times New Roman', Times, serif">{{post.title}}</h1> </a>
+                            <a href={% url 'post' post.id %}> <h1 class="fw-bolder mb-1" ; style= "color:orangered ;font-family:Georgia, 'Times New Roman', Times, serif">{{post.title}}</h1> </a>
                             <!-- Post meta content-->
                             <div class="text-muted fst-italic mb-2">Posted on {{post.created_date}} by {{post.author}}</div>
                             <!-- Post categories-->
@@ -27,6 +27,14 @@
                         <!-- Post content-->
                         <section class="mb-5"; style="color:black; font-family:Modern No.20">
                             <p class="fs-5 mb-4"> {{post.text | safe }} </p>
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'editar' post.id %}" style="color:Black; font-family: Arial, Helvetica, sans-serif;" class="btn btn-orange">Editar</a>
+                            <a href="{% url 'eliminar' post.id %}" style="color:Black; font-family: Arial, Helvetica, sans-serif;" class="btn btn-orange">Eliminar</a>
+                            {% else %}
+                            <div class="user_option">
+                                <a href="" class="user_link" >  <!--  -->
+                              <a class="btn btn-orange" href="{% url 'login' %}" style="color:white"><b>LOGIN</b></a>
+                              {% endif %}
                         </section>
                     </article>
                     <!-- Comments section-->
