@@ -78,7 +78,8 @@ DATABASES = {
 
 <p align="left"></p>
   <FONT COLOR="orange"
-- <em><i><b><H2>¡¡¡ Muchas gracias !!! a todos los Docentes y a cada uno de los integrantes del Equipo que estubierón a full en todo momento para poder lograr los objetivos esperados. </H2></em></b></i>
+- <em><i><b><H2>¡¡¡ Muchas gracias !!! a todos los Docentes y a cada uno de los integrantes del Equipo que estuvieron a disposición en todo momento para poder lograr los objetivos esperados.<br>
+ Hemos aprendido a trabajar en grupo trazando metas puntuales para construír de a poco el sitio web. Además, queremos destacar la gran complementación que hemos tenido, desde el desarrollo de ideas hasta el tipado y la ejecución de programas. Resaltando la colaboración investigativa de cada uno de los integrates.</H2></em></b></i>
 </FONT>
 
 ---
